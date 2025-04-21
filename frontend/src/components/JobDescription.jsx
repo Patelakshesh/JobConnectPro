@@ -20,7 +20,6 @@ export default function JobDescription() {
   const applyJobHandler = async () => {
       try {
         const res = await axios.get(`${APPLICATION_API_END_POINT}/apply/${jobId}`, {withCredentials: true})
-        console.log(res.data, "hiii")
         if(res.data.success){
           setIsApplied(true) //update local state
           const updateSingleJobs = {...singleJob, applications:[...singleJob.applications, {applicant: user?._id}]}

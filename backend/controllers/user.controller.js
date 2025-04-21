@@ -124,12 +124,10 @@ export const updateProfile = async (req, res) => {
           });
       }
         const fileUri = getDataUri(file);
-        // console.log("File URI Content:", fileUri);
         const cloudResponse = await cloudinary.uploader.upload(fileUri.content,{
           resource_type: "raw", 
           format: "pdf", 
       })
-        console.log("response", cloudResponse)
         let skillsArray;
           if(skills){
             skillsArray = skills.split(",")
