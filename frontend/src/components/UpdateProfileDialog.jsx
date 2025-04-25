@@ -72,12 +72,12 @@ export default function UpdateProfileDialog({ open, setOpen }) {
           <form onSubmit={submitHandler}>
             <div className="grid gap-4 py-4">
               <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="name" className="text-right">
+                <Label htmlFor="fullName" className="text-right">
                   Name
                 </Label>
                 <Input
-                  id="name"
-                  name="name"
+                  id="fullName"
+                  name="fullName"
                   type="text"
                   value={input.fullName}
                   onChange={changeEventHandle}

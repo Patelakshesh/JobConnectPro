@@ -7,13 +7,13 @@ import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
   const [query, setQuery] = useState("");
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-const searchJobHandler = () => {
-  dispatch(setSearchedQuery(query))
-  navigate('/browse')
-}
+  const searchJobHandler = () => {
+    dispatch(setSearchedQuery(query));
+    navigate("/browse");
+  };
   return (
     <div className="text-center">
       <div className="flex flex-col gap-5 my-10">
@@ -25,8 +25,8 @@ const searchJobHandler = () => {
           <span className="text-[#6A38C2]">Dream jobs</span>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-          temporibus expedita est perspiciatis ipsa.
+          JobConnectPro is your one-stop platform for discovering job
+          opportunities that truly match your skills and aspirations.
         </p>
         <div className="flex w-[40%] shadow-lg border border-gray-200 pl-3 rounded-full items-center gap-4 mx-auto">
           <input
@@ -35,7 +35,10 @@ const searchJobHandler = () => {
             onChange={(e) => setQuery(e.target.value)}
             className="outline-none border-none w-full"
           />
-          <Button onClick={searchJobHandler} className="rounded-r-full bg-black text-white dark:bg-black dark:text-white">
+          <Button
+            onClick={searchJobHandler}
+            className="rounded-r-full bg-black text-white dark:bg-black dark:text-white"
+          >
             <Search className="h-5 w-5" />
           </Button>
         </div>
